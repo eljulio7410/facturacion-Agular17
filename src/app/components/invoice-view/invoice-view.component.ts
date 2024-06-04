@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './invoice-view.component.html',
-  styleUrl: './invoice-view.component.css'
+  
 })
 export class InvoiceViewComponent {
 
