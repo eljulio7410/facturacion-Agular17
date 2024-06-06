@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-invoice-view',
@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
   
 })
 export class InvoiceViewComponent {
+/* 1- se pone @input para traer mediante subcomponentes
+   2- se trae html al sub componente html
+   3- se remplaza en este caso on el llave <invoice-view>  */
+  @Input() id!: number;
+  @Input() name!: string;
 
 }

@@ -6,37 +6,47 @@
         </div>
 
         <div class="card-body">
-            <div>
-                <ul class="list-group">
+            
+                <!-- 
+                    se copia estas lineas al componente view y asi subdividir
+
+                    <ul class="list-group">
                     <li class="list-group-item">
                         id: {{ invoice.id }}
                     </li>
                     <li class="list-group-item">
                         Nombre: {{ invoice.name }}
                     </li>
-                </ul>
-            </div>
-
+                </ul> 
+            -->
+            <!-- remplazamos por la siguiente manera -->
+            <app-invoice-view [id]="invoice.id" [name]="invoice.name"></app-invoice-view>
+        
+            
             <div class="row my-3">
                 <div class="col">
-                    <h3>Datos de cliente</h3>
+                    <!-- cortamos estos datos a subcomponente
+                        <h3>Datos de cliente</h3>
                     <ul class="list-group">
                         <li class="list-group-item active">{{invoice.client.name}} {{invoice.client.lastname}}</li>
                         <li class="list-group-item">{{invoice.client.address.country}} / {{invoice.client.address.city}}</li>
                         <li class="list-group-item">{{invoice.client.address.street}} {{invoice.client.lastname}}</li>
-                    </ul>
+                    </ul> 
+                -->
+                <app-client-view [client]="invoice.client"></app-client-view>
                 </div>
                 <div class="col">
-                    <h3>Datos de la Empresa</h3>
+<!--                     <h3>Datos de la Empresa</h3>
                     <ul class="list-group">
                         <li class="list-group-item active">{{invoice.company.name}}</li>
                         <li class="list-group-item">{{invoice.company.fiscalNumber}}</li>
-                    </ul>
+                    </ul> -->
+                    <app-company-view [company]="invoice.company"></app-company-view>
                 </div>
             </div>
 
             <div>
-                <h4>Detalle de factura</h4>
+                <!-- <h4>Detalle de factura</h4>
                 <table class="table - table-hover">
                     <thead>
                         <tr>
@@ -56,7 +66,8 @@
                         </tr>
                         }
                     </tbody>
-                </table>
+                </table> -->
+                <app-list-items [items]="invoice.items"></app-list-items>
             </div>
         </div>
 

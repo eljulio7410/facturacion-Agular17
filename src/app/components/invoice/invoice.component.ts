@@ -6,6 +6,7 @@ import { ClientViewComponent } from '../client-view/client-view.component';
 import { CompanyViewComponent } from '../company-view/company-view.component';
 import { ListItemsComponent } from '../list-items/list-items.component';
 import { RowItemComponent } from '../row-item/row-item.component';
+import { TotalComponent } from '../total/total.component';
 
 @Component({
   selector: 'app-invoice',
@@ -14,8 +15,8 @@ import { RowItemComponent } from '../row-item/row-item.component';
     InvoiceViewComponent, 
     ClientViewComponent, 
     CompanyViewComponent, 
-    ListItemsComponent, 
-    RowItemComponent
+    ListItemsComponent,
+    TotalComponent
   ],
   templateUrl: './invoice.component.html',
   
