@@ -29,6 +29,8 @@ export class InvoiceComponent implements OnInit {
     this.invoice = this.service.getInvoice();
   }
   
-  
+  removeItem(id: number){
+    this.invoice = this.service.remove(id);
+  }
 
 }

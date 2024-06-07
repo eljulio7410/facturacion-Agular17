@@ -4,7 +4,7 @@ export class Item {
     price!: number;
     quantity!: number;
 
-    total(): number{
+    total(): number {
         return(this.price * this.quantity);
     }
 }

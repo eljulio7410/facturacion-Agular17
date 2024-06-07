@@ -7,6 +7,7 @@
                 <th>product</th>
                 <th>price</th>
                 <th>quantity</th>
+                <th>remove</th>
             </tr>
         </thead>
         <tbody>
@@ -19,7 +20,7 @@
                 <td>{{item.price}}</td>
                 <td>{{item.quantity}}</td>
             </tr> -->
-            <tr app-row-item [item]="item"></tr>
+            <tr app-row-item [item]="item" (removeEventEmitter)="onRemove($event)"></tr>
             }
         </tbody>
     </table>
